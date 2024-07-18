@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>World's Famous Restaurants</title>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .bold-text {
+            font-weight: bold;
+            color: #FF0000; /* changed to red */
+            text-shadow: 2px 2px 4px #000000;
+            font-size: 1.5em; /* increased by 50% */
+        }
+        .restaurant-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .restaurant-list li {
+            padding: 10px;
+            border-bottom: 1px solid #CCCCCC;
+        }
+        .restaurant-list li:last-child {
+            border-bottom: none;
+        }
+        .restaurant-list li::before {
+            content: "\2022"; /* bright bullet point */
+            color: #FFFF00; /* bright yellow */
+            font-size: 1.5em; /* increased by 50% */
+            margin-right: 10px;
+        }
+        .topic {
+            font-size: 1.75em; /* increased by 75% */
+            color: #000000; /* changed to black */
+        }
+        .restaurant-name {
+            font-size: 1.75em; /* increased by 75% */
+            color: #000000; /* changed to black */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="heading bold-text">World's Famous Restaurants</div>
+        <span class="sideMenuButton" onclick="openNavbar()">
+            &#9776
+        </span>
+        <div class="navbar">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Side navigation bar for responsive website -->
+    <div class="sideNavigationBar" id="sideNavigationBar">
+        <a href="#" class="closeButton" onclick="closeNavbar()">
+            &#x274C
+        </a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Sign Up</a>
+    </div>
+    <!-- Content -->
+    <div class="line" id="Home">
+        <div class="side1">
+            <h1 class="bold-text">Experience the Flavors of the World</h1>
+            <button>
+                <a href="https://www.theworlds50best.com/">
+                    Explore More
+                </a>
+            </button>
+        </div>
+        <div class="side2">
+            <img src="https://www.theworlds50best.com/assets/images/logo.png" width="500">
+        </div>
+    </div>
+    <section class="about" id="My Projects">
+        <div class="content">
+            <div class="title bold-text">
+                <span>Top 5 Restaurants</span>
+            </div>
+            <ul class="restaurant-list">
+                <li>
+                    <div class="topic">
+                        <a href="https://www.noma.dk/" target="_blank">
+                            <span class="restaurant-name">Noma</span>
+                        </a>
+                    </div>
+                    <p>
+                        Noma is a two-Michelin-starred restaurant located in Copenhagen, Denmark.
+                    </p>
+                </li>
+                <li>
+                    <div class="topic">
+                        <a href="https://www.mirazur.fr/" target="_blank">
+                            <span class="restaurant-name">Mirazur</span>
+                        </a>
+                    </div>
+                    <p>
+                        Mirazur is a three-Michelin-starred restaurant located in Menton, France.
+                    </p>
+                </li>
+                <li>
+                    <div class="topic">
+                        <a href="https://www.asador.com/" target="_blank">
+                            <span class="restaurant-name">Asador Etxebarri</span>
+                        </a>
+                    </div>
+                    <p>
+                        Asador Etxebarri is a one-Michelin-starred restaurant located in Axpe, Spain.
+                    </p>
+                </li>
+                <li>
+                    <div class="topic">
+                        <a href="https://www.gaggan.com/" target="_blank">
+                            <span class="restaurant-name">Gaggan</span>
+                        </a>
+                    </div>
+                    <p>
+                        Gaggan is a two-Michelin-starred restaurant located in Bangkok, Thailand.
+                    </p>
+                </li>
+                <li>
+                    <div class="topic">
+                        <a href="https://www.centralrestaurante.com.pe/" target="_blank">
+                            <span class="restaurant-name">Central</span>
+                        </a>
+                    </div>
+                    <p>
+                        Central is a two-Michelin-starred restaurant located in Lima, Peru.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        function openNavbar() {
+            document.getElementById("sideNavigationBar").style.width = "250px";
+        }
+        function closeNavbar() {
+            document.getElementById("sideNavigationBar").style.width = "0";
+        }
+    </script>
+</body>
+</html>
